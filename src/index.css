@@ -11,3 +11,30 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.board-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.square {
+  width: 60px;
+  height: 60px;
+
+  padding: 0;
+  margin: 0;
+  border: 1px solid #999;
+
+  /* ここが重要：文字のせいでズレないようにする */
+
+
+  box-sizing: border-box;
+
+  /* button特有の見た目差を消す（特にSafari/Chrome） */
+  -webkit-appearance: none;
+  appearance: none;
+  background: white;
+  font: inherit;
+  line-height: 1;
+}
