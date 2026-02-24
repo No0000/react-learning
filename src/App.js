@@ -6,6 +6,8 @@ const initialTasks = [
   { id: 3, text: "Make components pure", done: false },
 ];
 
+const test = 0;
+
 export default function App() {
   return (
     <div style={{ padding: 20 }}>
