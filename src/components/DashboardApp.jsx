@@ -1,4 +1,5 @@
 import { useState } from "react";
+import FilterButton from "./FilterButton";
 
 const initialTasks = [
   { id: 1, text: "Read describing the UI", done: true },
@@ -71,18 +72,7 @@ function TaskSection({ tasks, setTasks, filter, setFilter }) {
         setNewText={setNewText}
       />
 
-      <div style={{ margin: "20px 0" }}>
-        <button onClick={() => setFilter("all")} disabled={filter === "all"}>
-          All
-        </button>
-        <button onClick={() => setFilter("active")} disabled={filter === "active"}>
-          Active
-        </button>
-        <button onClick={() => setFilter("done")} disabled={filter === "done"}>
-          Done
-        </button>
-      </div>
-
+      <FilterButton filter={filter} setFilter={setFilter} />
       <TaskList tasks={tasks} setTasks={setTasks} filter={filter} />
     </div>
   );
